@@ -997,7 +997,7 @@
   <div id="scene-bg"></div>
   <video id="scene-video-a" class="scene-video" muted playsinline></video>
   <video id="scene-video-b" class="scene-video" muted playsinline></video>
-  <audio id="bgm" loop src="./shot_video/bgm.mp3"></audio>
+  <audio id="bgm" loop src="./bgm.mp3"></audio>
   <div id="fog"></div>
   <canvas id="particles"></canvas>
 
@@ -1697,7 +1697,7 @@ function loadAndPlay(useFade, gen) {
   const hasOldVideo = activeVideo.classList.contains('active');
 
   if (!hasOldVideo) {
-    activeVideo.src = './shot_video/' + id + '.mp4';
+    activeVideo.src = './' + id + '.mp4';
     activeVideo.currentTime = 0;
     if (useFade) {
       activeVideo.style.opacity = '0';
@@ -1726,7 +1726,7 @@ function loadAndPlay(useFade, gen) {
     };
   } else {
     const sb = standbyVideo; // 捕获当前 standby 引用
-    sb.src = './shot_video/' + id + '.mp4';
+    sb.src = './' + id + '.mp4';
     sb.currentTime = 0;
     sb.style.opacity = '0';
     sb.classList.remove('active', 'fade-in', 'fade-out');
